@@ -1,0 +1,20 @@
+import Vue from 'vue';
+import LAside from '@/components/layout/aside';
+import LContent from '@/components/layout/content';
+import LContainer from '@/components/layout/container';
+import LHeader from '@/components/layout/header';
+import Logo from '@/components/layout/logo';
+import LMain from '@/components/layout/main';
+import LNav from '@/components/layout/nav';
+import LWrapper from '@/components/layout/wrapper';
+import LTitle from '@/components/layout/title';
+
+Vue.component('l-aside', LAside);
+Vue.component('l-content', LContent);
+Vue.component('l-container', LContainer);
+Vue.component('l-header', LHeader);
+Vue.component('l-logo', Logo);
+Vue.component('l-main', LMain);
+Vue.component('l-nav', LNav);
+Vue.component('l-wrapper', LWrapper);
+Vue.component('l-title', LTitle);

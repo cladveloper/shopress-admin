@@ -1,0 +1,157 @@
+// ENCABEZADOS
+// Dentro de un texto
+h1, h2, h3, h4, h5, h6, .h
+    font-weight: 700
+    margin-bottom: $gutter / 2
+h1
+    font-size: $xxl
+h2
+    font-size: $xl
+h3
+    font-size: $l
+h4
+    font-size: $m
+h5
+    font-size: $s
+h6
+    font-size: $xs
+
+.txt-c
+    text-align: center
+
+.h-base
+    font-weight: bold
+    text-transform: uppercase
+    color: map-get($colors, 'gored')
+    display: block
+    margin-bottom: $gutter
+
+// PÁRRAFOS
+.p, p
+    font-size: $s
+    margin-bottom: $s
+
+    &:last-child
+        margin-bottom: $gutter * 2
+
+.lead
+    font-size: $xl
+    font-weight: bold
+
+// TEXTO QUE ORDENA
+// listas
+ol, .ol, ul, .ul
+    margin-left: $gutter * 2
+    margin-bottom: $gutter * 2
+
+    & li
+        line-height: $line-height
+
+.ol, ol
+    list-style: decimal
+
+ul, .ul
+    list-style-type: disc
+.list // estilo de listas
+    &-none
+        list-style-type: none !important
+        margin-left: 1rem !important
+    &-reset
+        list-style-type: none !important
+        margin-left: 0 !important
+// listas de definición
+
+.code, code
+    font-size: 120%
+    color: #e83e8c
+
+
+.line-height
+    line-height: $line-height
+
+.line-height-0
+    line-height: 1
+    
+.font-weight-regular
+    font-weight: 400
+
+.font-weight-bold, b, strong
+    font-weight: 700
+
+.font-style-italic, i
+    font-style: italic
+
+blockquote, .blockquote
+    margin-left: $gutter*2
+    margin-bottom: $gutter
+
+.font-size
+    &-xxxl
+        font-size: $xxxl !important
+    &-xxl
+        font-size: $xxl !important
+    &-xl
+        font-size: $xl !important
+    &-l
+        font-size: $l !important
+    &-m
+        font-size: $m !important
+    &-s
+        font-size: $s !important
+    &-xs
+        font-size: $xs !important
+    &-xxs
+        font-size: $xxs !important
+
+@each $size in $vp
+    $key: nth($size, 1)
+    $value: nth($size, 2)
+    @media screen and(min-width: $value)
+        .font-size-#{$key}
+            &-xxxl
+                font-size: $xxxl !important
+            &-xxl
+                font-size: $xxl !important
+            &-xl
+                font-size: $xl !important
+            &-l
+                font-size: $l !important
+            &-m
+                font-size: $m !important
+            &-s
+                font-size: $s !important
+            &-xs
+                font-size: $xs !important
+
+
+a
+    text-decoration: none
+
+img
+    max-width: 100%
+
+.opacity-75
+    opacity: .75
+
+@each $font in $fonts
+    $key: nth($font, 1)
+    $value: nth($font, 2)
+    .font-family-#{$key}
+        font-family: unquote($value)
+
+.link
+    font-weight: bold
+    color: map-get($colors, godark-75)
+    text-decoration: none
+
+.title
+    padding-bottom: $gutter/2
+    font-size: $m
+    border-bottom: 1px solid map-get($colors, grey)
+    margin-bottom: $gutter
+
+.subtitle
+    font-size: $xs
+    text-transform: uppercase
+    opacity: .8
+    margin-bottom: $gutter / 2

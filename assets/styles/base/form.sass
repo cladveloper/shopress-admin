@@ -1,0 +1,95 @@
+.form
+    & .box
+        position: relative
+
+        & .error-msg
+            margin-top: $gutter/4
+            top: 100%
+            color: map-get($colors, error)
+            position: absolute
+            font-size: $xxs
+            font-weight: bold
+            &::before
+                content: '*'
+
+        & .msg
+            margin-top: $gutter/4
+            top: 100%
+            color: map-get($colors, dark-50)
+            position: absolute
+            font-size: $xxs
+            font-weight: bold
+
+    & label
+        display: block
+        font-weight: bold
+        margin-bottom: $gutter/2
+        opacity: .75
+        font-size: $xs
+    & input, & select, & textarea
+        display: block
+        margin-bottom: $gutter*2
+        border: 1px solid map-get($colors, grey)
+        width: 100%
+        padding: $gutter/2.25
+        box-sizing: border-box
+        font-family: $font
+        font-size: $xs
+        border-radius: $border-radius
+
+        &.error
+            border: 1px solid map-get($colors, error)
+
+        &:focus
+            outline: none !important
+            background-color: map-get($colors, light)
+
+        &:disabled
+            opacity: .85
+
+    & textarea
+        $hg: 100px
+        height: $hg
+        max-height: $hg
+        min-height: $hg
+
+    & .checkbox
+        width: block
+        display: flex
+        align-items: center
+        margin-bottom: $gutter*2
+        opacity: 1
+
+        & input
+            width: auto
+            margin: 0
+            margin-right: $gutter/2
+
+        & span
+            font-weight: normal
+
+.btn
+    padding: $gutter/1.75 $gutter !important
+    border: 0 !important
+    border-radius: $border-radius !important
+    font-size: $xs !important
+    text-decoration: none !important
+    color: map-get($colors, dark) !important
+    font-weight: bold !important
+    cursor: pointer
+
+    &-primary
+        background-color: map-get($colors, primary) !important
+        color: white !important
+
+        &:active
+            background-color: map-get($colors, primary-dark) !important
+
+    &-secondary
+        background-color: map-get($colors, secondary) !important
+        color: white !important
+
+        &:active
+            background-color: map-get($colors, secondary-dark) !important
+    
+

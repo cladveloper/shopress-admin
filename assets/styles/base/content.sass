@@ -1,0 +1,26 @@
+.space
+    &:before
+        display: block
+        content: " "
+        margin-top: -$h-size
+        height: $h-size
+        visibility: hidden
+    
+    &-first
+        margin-top: $h-size-original
+
+    &-content
+        padding-top: $gutter*2
+        padding-bottom: $gutter*2
+
+.wrapper
+    margin: auto
+    max-width: $max-width
+    width: 100%
+
+    @media screen and(max-width: $max-width)
+        padding: 0 $gutter
+
+.display-block
+    display: block
+    width: 100%
