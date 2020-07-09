@@ -1,4 +1,5 @@
 import Vue from 'vue';
+process.env;
 
 Vue.prototype.$resizeImage = (url = "", width = 100, height = 100, quality = 80) => {
     const baseURL = process.env.NODE_ENV !== 'production' ? process.env.API_URL_DEV : process.env.API_URL_PRODUCTION;
